@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汗流夾背-本月課表</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="icon" href="./img/redlogo.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/curriculum.css">
+
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="checkbox">
+        <nav class="nav">
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="./img/redlogo.png" alt="汗流夾背LOGO圖">
+                </div>
+            </a>
+            <div class="list-box">
+                <ul class="list">
+                    <li><a href="./product.html">健身周邊</a></li>
+                    <li><a href="./course.html">課程介紹</a></li>
+                    <li><a href="./signup.html">立刻報名</a></li>
+                    <li><a href="./location.html">據點介紹</a></li>
+                    <li><a href="./coach.html">教練陣容</a></li>
+                    <li><a href="./contact.html">聯絡我們</a></li>
+                </ul>
+                <ul class="login-header">
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></i></a></li>
+                    <li><a href="#" class="login-on">登入/註冊</a></li>
+                </ul>
+            </div>
+            <label for="checkbox">
+                <span></span>
+            </label>
+            <div class="list-box-rwd">
+                <ul class="list">
+                    <li><a href="./product.html">健身周邊</a></li>
+                    <li><a href="./course.html">課程介紹</a></li>
+                    <li><a href="./signup.html">立刻報名</a></li>
+                    <li><a href="./location.html">據點介紹</a></li>
+                    <li><a href="./coach.html">教練陣容</a></li>
+                    <li><a href="./contact.html">聯絡我們</a></li>
+                </ul>
+                <ul class="login-header">
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></i></a></li>
+                    <li><a href="#" class="login-on">登入/註冊</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="login" id="login-box">
+        <div class="login-wrap">
+            <div class="login-close" id="login-close"></div>
+            <div class="login-tab" id="login-tab">
+                <div class="login-left">
+                    <h2>登入帳號</h2>
+                </div>
+                <div class="login-right">
+                    <h2>註冊帳號</h2>
+                </div>
+                <div class="login-bot-line"></div>
+            </div>
+            <div class="log-box">
+                <div class="log login-move">
+                    <form>
+                        <div class="username">
+                            <label for="user"><i class="fas fa-user"></i></label>
+                            <input type="text" id="user" placeholder="請輸入帳號" autocomplete="off">
+                        </div>
+                        <div class="password">
+                            <label for="password"><i class="fas fa-lock"></i></label>
+                            <input type="password" id="password" placeholder="請輸入密碼">
+                        </div>
+                        <div class="log-but">
+                            <a href="#">忘記密碼</a>
+                            <button type="submit">登入</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="reg">
+                    <form>
+                        <div class="name-reg">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" placeholder="請輸入姓名">
+                        </div>
+                        <div class="username-reg">
+                            <label for="username">註冊帳號</label>
+                            <input type="text" id="username" placeholder="請輸入帳號" autocomplete="off">
+                        </div>
+                        <div class="password-reg">
+                            <label for="password-sign">註冊密碼</label>
+                            <input type="password" id="password-sign" placeholder="請輸入密碼">
+                            <br>
+                            <label for="passwords">確認密碼</label>
+                            <input type="password" id="passwords" placeholder="請輸入密碼">
+                        </div>
+                        <div class="phone">
+                            <label for="num">手機號碼</label>
+                            <input type="number" id="num" autocomplete="off" placeholder="請輸入手機">
+                        </div>
+
+
+
+                        <div class="reg-but">
+                            <button type="submit">註冊</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="copyright">
+            <div class="footer-icon">
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+            <h4>汗流夾背 &copy; 2020 ALL RIGHTS RESERVED.</h4>
+        </div>
+    </footer>
+
+
+
+    <!--RWD -->
+    <script>
+        var menuBtn = document.querySelector('#checkbox');
+        var menu = document.querySelector('.nav > .list-box-rwd');
+        var label = document.querySelector('.nav > label');
+        menuBtn.addEventListener('click', function () {
+            menu.classList.toggle('list-slide');
+            label.classList.toggle('label-active');
+
+
+        });
+
+
+    </script>
+    <!-- 登入 -->
+
+    <script>
+        var login = document.querySelectorAll('.login-on');
+        var box = document.querySelector('#login-box');
+        var x = document.querySelector('#login-close');
+        var logW = document.querySelector('.login-wrap');
+
+        for (let i = 0; i < login.length; i++) {
+            login[i].addEventListener('click', function () {
+
+                box.style.display = "flex";
+                // logW.classList.add('login-active');
+                x.addEventListener('click', function () {
+                    box.style.display = "none";
+                    // logW.classList.remove('login-active');
+                })
+            });
+        }
+        var logs = document.querySelectorAll('#login-tab > div');
+        var regs = document.querySelectorAll('.log-box > div');
+        var line = document.querySelector('.login-bot-line');
+        var logTabindex = 0;
+        for (let i = 0; i < logs.length; i++) {
+            logs[i].addEventListener('click', function () {
+                regs[logTabindex].classList.remove('login-move');
+
+                logTabindex = i;
+
+                regs[logTabindex].classList.add('login-move');
+                if (i > 0) {
+                    line.classList.add('line');
+                } else {
+                    line.classList.remove('line');
+                }
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

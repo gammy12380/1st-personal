@@ -16,7 +16,13 @@
 </head>
 
 <body>
-
+    <div class="loader-wrap">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loader-txt">Loading...</span>
+    </div>
     <header>
         <input type="checkbox" id="checkbox">
         <nav class="nav">
@@ -140,14 +146,14 @@
                 <div class="sec1-wrap">
                     <div class="sec1-txt">
                         <div class="sec1-txt-top">
-                            <div class="sec1-animate-top">
+                            <div>
                                 <h2>NO PAIN</h2>
                                 <h2>NO GAIN</h2>
                             </div>
                         </div>
-                        <div class="sec1-line"></div>
+                        <div class="line"></div>
                         <div class="sec1-txt-bot">
-                            <div class="sec1-animate-bot">
+                            <div>
                                 <h2>汗流夾背</h2>
                             </div>
                         </div>
@@ -282,6 +288,31 @@
         </section>
     </div>
 
+
+
+    <!-- loader -->
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var loader = document.querySelector('.loader-wrap');
+                loader.classList.add('loader-wrap-fadeout');
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 1000);
+                document.querySelector('.line').classList.add('sec1-line');
+                document.querySelector('.sec1-txt-top>div').classList.add('sec1-animate-top');
+                document.querySelector('.sec1-txt-bot>div').classList.add('sec1-animate-bot');
+            }, 2000);
+
+        });
+        // window.addEventListener('load', function () {
+        //     var Load = document.querySelector('.loader-wrap');
+        //     if (Load != null) {
+        //         Load.style.display = "none";
+        //     }
+        // });
+
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js"></script>
     <script>
         var dotList = document.querySelectorAll('#dotList li')
@@ -334,7 +365,7 @@
 
     <!-- 影片支援問題 -->
     <script>
-        window.onload=function(){
+        window.onload = function () {
             var vid = document.getElementById("myVideo");
             vid.play();
         }
