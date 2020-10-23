@@ -8,7 +8,7 @@
 body {
     font-family: 微軟正黑體;
 }
-.loader-wrap-fadeout{
+.loader-wrap-fadeout {
     opacity: 0;
 }
 .loader-wrap {
@@ -208,11 +208,13 @@ header {
 #checkbox {
     display: none;
 }
-ul + label {
-    /* z-index: 99; */
+.login-header + label {
     display: none;
 }
 .list-box-rwd {
+    display: none;
+}
+.list-wrap-rwd {
     display: none;
 }
 @media screen and (max-width: 1199px) {
@@ -241,144 +243,167 @@ ul + label {
         width: 100%;
         position: relative;
         justify-content: space-between;
+        transform-style: preserve-3d;
+        perspective: 75rem;
+    }
+    .login-header {
+        display: none;
     }
     .logo {
         width: 80px;
         margin-left: 50px;
     }
-    .list-box + label {
-        display: block;
-        position: absolute;
-        right: 30px;
-        margin: auto 0;
-        bottom: 0;
-        top: 0;
-        width: 40px;
-        height: 40px;
+    .ham {
         cursor: pointer;
-        transition: 0.3s;
-    }
-    .list-box + label::before,
-    .list-box + label span::before,
-    .list-box + label span::after {
-        content: "";
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        transition: 0.3s;
+        top: 10px;
+        /* background-color: #fff; */
     }
-    .list-box + label::before {
-        top: 0;
-        bottom: 0;
+    .ham:hover {
+        background-color: rgba(161, 185, 206, 0.349);
+        border-radius: 40%;
+        transition: 0.5s;
     }
-    .list-box + label span::before {
-        top: 8px;
-    }
-    .list-box + label span::after {
-        bottom: 8px;
-    }
-    .label-active span::before {
+
+    .hamRotate.active {
         transform: rotate(45deg);
-        width: 20px !important;
-        top: 11px !important;
-        left: 14px !important;
     }
-    .label-active span::after {
-        transform: rotate(-45deg);
-        width: 20px !important;
-        bottom: 11px !important;
-        left: 13px !important;
+    .hamRotate180.active {
+        transform: rotate(180deg);
+    }
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: rgb(161, 29, 29);
+        stroke-width: 5.5;
+        stroke-linecap: round;
+    }
+    .ham6 .top {
+        stroke-dasharray: 40 172;
+    }
+    .ham6 .middle {
+        stroke-dasharray: 40 111;
+    }
+    .ham6 .bottom {
+        stroke-dasharray: 40 172;
+    }
+    .ham6.active-svg .top {
+        stroke-dashoffset: -132px;
+    }
+    .ham6.active-svg .middle {
+        stroke-dashoffset: -71px;
+    }
+    .ham6.active-svg .bottom {
+        stroke-dashoffset: -132px;
+    }
+    .login-header + label {
+        display: block;
+        position: relative;
+        top: -15px;
+        right: 0px;
+        z-index: 5;
+        /* overflow: hidden; */
+        width: 70px;
     }
     .list-box {
         display: none;
     }
 
-    .list-box-rwd {
+    .opacity {
+        background-color: rgb(28, 28, 28, 0.8);
         display: block;
-        position: absolute;
-        top: 51px;
-        width: 100%;
-        transform: translate(100%);
-        transition: 1s;
-        box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
     }
-
-    .list {
-        background-color: rgb(28, 28, 28);
-        display: block;
-        top: 50px;
-        left: 0;
+    .list-box-rwd {
+        position: absolute;
+        top: 0;
         right: 0;
         width: 100%;
-        padding-top: 50px;
-        transition: 1s;
+        height: 100vh;
+        z-index: -1;
+        transition: 1s ease-in-out;
     }
-    .list-slide {
-        transform: translate(0%);
+    .list-wrap-rwd {
+        width: 70%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(247, 244, 244);
+        overflow: auto;
+        z-index: -1;
+        transform: rotateY(-180deg);
+        transform-origin: top right;
+        transition: 1s cubic-bezier(0.55, 0.4, 0.55, 0.39);
     }
-    .list li {
-        width: 100%;
-        padding: 0;
+    .list-rotate {
+        transform: rotateY(0deg);
     }
-    .list li:last-child a {
-        border: none;
-    }
-    .list li a {
+    .list-rwd > li a {
         display: block;
-        padding: 20px 0;
-        margin: 0 auto;
-        width: 95%;
-        border-bottom: 1px solid #666;
-        text-align: center;
+        padding: 15px;
+        font-size: 24px;
+        text-decoration: none;
+        color: rgb(28, 28, 28);
+        font-weight: bold;
         position: relative;
     }
-    .list li:hover::before {
+    .list-rwd > li a::before {
         content: "";
         display: block;
         position: absolute;
-        bottom: -10px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 80px;
-        height: 2px;
-        z-index: 1;
-        border-bottom: 1px solid red;
+        bottom: 5px;
+        left: 15px;
+        width: 45px;
+        border-bottom: 3px solid rgb(197, 32, 32);
+        transition: 0.5s;
     }
-    .list li::before {
-        width: 0;
+    .list-rwd > li:hover a::before {
+        width: 95px;
+    }
+    .login-header-rwd {
+        width: 128px;
+        text-align: center;
+    }
+    .login-header-rwd > li a {
+        display: block;
+        color: rgb(28, 28, 28);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px;
+        position: relative;
+    }
+    .login-header-rwd > li a::before {
+        content: "";
+        display: block;
         position: absolute;
-        bottom: -10px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 0;
-        height: 0;
+        bottom: 5px;
+        left: 15px;
+        width: 45px;
+        border-bottom: 3px solid rgb(197, 32, 32);
+        transition: 0.5s;
     }
-
-    .login-header {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-        width: 150px;
-    }
-    .login-header li a {
-        font-size: 16px;
-    }
-    .login-header li:first-of-type a:hover {
-        color: red;
-        font-size: 16px;
+    .login-header-rwd > li:hover a::before {
+        width: 95px;
     }
     .nav-circle {
         display: none;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 575px) {
+    .list-rwd > li a {
+        font-size: 20px;
+    }
 }
 /*  導覽列  */
 /* 登入 */
@@ -476,10 +501,6 @@ input[type="number"] {
     left: 29px;
     width: 124px;
     border-bottom: 5px solid green;
-    transition: 0.5s ease-in-out;
-}
-.line {
-    transform: translateX(180px);
     transition: 0.5s ease-in-out;
 }
 .login .log {

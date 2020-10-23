@@ -228,18 +228,19 @@ video {
     justify-content: center;
 }
 .sec2-txt-wrap {
-    width:100%;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 .scrollimg {
     width: 50%;
+    height: 50%;
     display: flex;
 }
 .scrollimg .img {
     margin: auto;
     width: 50%;
-    height: 300px;
+    height: 100%;
     overflow: scroll;
 }
 .img::-webkit-scrollbar {

@@ -84,6 +84,9 @@ body {
     transition: opacity ease-in-out 1s;
     background-color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .item:nth-of-type(1):hover .item-txt {
     opacity: 0;
@@ -245,6 +248,11 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .item:nth-of-type(1) .item-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .item:nth-of-type(2) .item-txt {
         position: absolute;
     }
@@ -271,11 +279,88 @@ body {
     }
     .contact-wrap {
         width: 100%;
-        padding: 0 15px;
+        padding: 0;
+        margin: 0;
     }
     .item {
         width: 100%;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    .item:nth-of-type(1) {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: all 1s ease-in-out;
+    }
+
+    .item:nth-of-type(1) .item-txt {
+        transition: all 1s ease-in-out;
+        padding: 15px 20px;
+    }
+    .item:nth-of-type(1):hover .item-txt {
+        opacity: 1;
+        background: none;
+        width: 100%;
+    }
+    .item:nth-of-type(1) .item-txt h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    .item:nth-of-type(1):hover .item-txt h2,
+    .item:nth-of-type(1):hover .item-txt p {
+        display: none;
+    }
+    .item:nth-of-type(1) .item-txt ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        color: #eee;
+        font-weight: bold;
+        padding: 0;
+    }
+    .item:nth-of-type(1):hover .item-txt > ul {
+        display: block;
+        opacity: 1;
+    }
+    .item:nth-of-type(2) {
+        position: relative;
+        bottom: 0;
+        cursor: pointer;
+    }
+    .item:nth-of-type(2) .item-pic {
+        height: 85%;
+    }
+    .item:nth-of-type(2) .item-txt {
+        height: 15%;
+    }
+    .item:nth-of-type(2) .item-txt p {
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .item:nth-of-type(2):hover .item-txt {
+        height: 100%;
+    }
+    .item:nth-of-type(3):hover .item-txt {
+        height: 100%;
+    }
+    .item:nth-of-type(2) .item-txt h2 {
+        font-size: 24px;
+        margin: 10px 0 25px;
+    }
+    .item:nth-of-type(3) .item-txt {
+        height: 15%;
+        padding: 0 10px;
+    }
+    .item:nth-of-type(3) .item-txt h2 {
+        font-size: 24px;
+        margin: 10px 0 25px;
+    }
+    .item:nth-of-type(3) .item-txt p,
+    .item:nth-of-type(3) .item-txt button {
+        font-size: 1rem;
+        line-height: 1.2;
     }
 }
