@@ -7,6 +7,10 @@
 }
 body {
     font-family: 微軟正黑體;
+    overflow-x: hidden;
+}
+body.hide {
+    overflow: hidden;
 }
 .loader-wrap-fadeout {
     opacity: 0;
@@ -443,10 +447,6 @@ input[type="number"] {
     background-color: #333;
     /* transition: 1s linear; */
 }
-/* .login-active {
-    transform: translate(-50%, -50%);
-    transition: 1s linear;
-} */
 .login-close {
     position: absolute;
     top: 5px;

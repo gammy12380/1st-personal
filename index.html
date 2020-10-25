@@ -300,10 +300,15 @@
     <script>
         window.addEventListener('load', function () {
             setTimeout(function () {
-                var loader = document.querySelector('.loader-wrap');
-                loader.classList.add('loader-wrap-fadeout');
+                var bodyL = document.querySelector('body');
+                bodyL.classList.add('hide');
                 setTimeout(function () {
-                    loader.style.display = "none";
+                    var loader = document.querySelector('.loader-wrap');
+                    loader.classList.add('loader-wrap-fadeout');
+                    setTimeout(function () {
+                        loader.style.display = "none";
+                        bodyL.classList.remove('hide');
+                    }, 1000);
                 }, 1000);
                 document.querySelector('.line-').classList.add('sec1-line');
                 document.querySelector('.sec1-txt-top>div').classList.add('sec1-animate-top');

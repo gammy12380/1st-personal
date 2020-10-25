@@ -193,19 +193,11 @@
                 </div>
             </div>
             <div class="item">
-                <div class="item-pic">
-                    <img src="./img/Google-Map.jpg" alt="map">
-                </div>
-                <div class="item-txt">
-                    <h2>場館位置</h2>
-                    <p>中壢復興店</p>
-                    <p>地址 : 320桃園市中壢區復興路46號9樓</p>
-                    <p>TEL : 0999-888-777</p>
-                </div>
+                <div id="map"></div>
             </div>
         </div>
     </div>
-    <div id="map" style="width: 100%; height: 500px">
+    
 
 
     <footer>
@@ -219,17 +211,21 @@
         </div>
     </footer>
 
+
     <script> </script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnrhpDXM6S-eTkp5PswxzsyOwNuEuKH2M&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJoXsieLxtvBvy-FyvGFnfBgSSQybJlUQ&callback=initMap&callback=initMap"></script>
     <!-- loader -->
     <script>
         window.addEventListener('load', function () {
+            var bodyL = document.querySelector('body');
+            bodyL.classList.add('hide');
             setTimeout(function () {
                 var loader = document.querySelector('.loader-wrap');
                 loader.classList.add('loader-wrap-fadeout');
                 setTimeout(function () {
                     loader.style.display = "none";
+                    bodyL.classList.remove('hide');
                 }, 1000);
             }, 1000);
 
@@ -237,13 +233,72 @@
     </script>
     <script>
         function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: 24.9576472, lng: 121.2249861};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
+          zoom: 18,
+          center: uluru,         
+          styles:[
+					{
+						stylers:[
+							{hue:'#4E3D42'},
+							{saturation:-60},
+                            // {color:'#363732'}
+						]
+					},{
+						featureType:'road',
+						elementType:'geometry',
+						stylers:[
+							{lightness:100},
+							{visibility:'simplified'},
+                            {color:'#DCE1E9'}
+                            
+						]
+					},{
+						featureType:'poi',
+						elementType:'labels',
+						stylers:[
+							{visibility: "on"}
+						]
+					},{
+						featureType:'poi.park',//搜尋點
+						elementType:'labels',//標示的部分
+						stylers:[
+							{visibility: "on"}
+						]
+					},{
+						featureType:'transit',
+						elementType:'labels',
+						stylers:[
+							{hue:'#465775'},
+							{saturation:+80},
+                            
+						]
+					},{
+						featureType:'road',
+						elementType:'labels',
+						stylers:[
+							{visibility: "on"},
+                            
+
+						]
+					},{
+						featureType:'water',//搜尋點
+						elementType:'geometry',//幾何/線條的部分
+						stylers:[
+                            {color:'#7EA2AA'}
+						]
+					}, {
+                        elementType: 'labels.text.stroke',
+                        stylers: [
+                            {color: '#FFE1A8'}
+                        ]
+                    }]
         });
         var marker = new google.maps.Marker({
           position: uluru,
+          animation: google.maps.Animation.BOUNCE,
+          draggable: true,
+    
           map: map
         });
       }

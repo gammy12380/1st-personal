@@ -65,7 +65,7 @@ section {
     margin-top: 15px;
     margin-bottom: 15px;
     color: rgb(235, 77, 66);
-    text-shadow: 1px 1px 2px  rgba(0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0.3);
     font-weight: bold;
 }
 .sign-right p {
@@ -121,4 +121,42 @@ section {
 }
 .sign-body button:focus {
     outline: none;
+}
+@media screen and (max-width: 991px) {
+    .sign {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sign-left {
+        margin-bottom: 30px;
+    }
+    .sign-right h2 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .sign-left {
+        width: 100%;
+    }
+    .sign-left img {
+        max-width: 100%;
+    }
+    .sign-right {
+        width: 100%;
+    }
+    .sign-body {
+        width: 250px;
+        margin: 15px;
+    }
+    .sign-body input,
+    .sign-body select {
+        width: 100%;
+        max-width: 100%;
+    }
+    .sign-right p {
+        font-size: 1rem;
+    }
 }

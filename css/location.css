@@ -121,3 +121,93 @@ body {
     color: #fff;
     background-color: rgb(199, 0, 0);
 }
+@media screen and (max-width: 991px) {
+    .location-wrap {
+        width: 100%;
+        margin: 0 15px;
+    }
+    .item {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-txt-wrap {
+        width: 60%;
+    }
+    .item:nth-child(even) .item-pic {
+        order: -1;
+    }
+    .item-pic {
+        width: 70%;
+    }
+    .item-txt-wrap:nth-child(odd),
+    .item-txt-wrap:nth-child(odd) {
+        transform: translateY(-30%);
+    }
+    .item-txt-wrap:nth-child(even),
+    .item-txt-wrap:nth-child(even) {
+        transform: translateY(-30%);
+    }
+    .item:nth-of-type(1) .item-txt {
+        box-shadow: -5px -5px 3px 0px #190a427a;
+    }
+    .item:nth-of-type(2) .item-txt {
+        box-shadow: 5px -5px 3px 0px #6030977a;
+    }
+    .item:nth-of-type(3) .item-txt {
+        box-shadow: -5px -5px 3px 0px #197a627a;
+    }
+    .item:nth-of-type(4) .item-txt {
+        box-shadow: 5px -5px 3px 0px #043e6d7a;
+    }
+    .item-txt {
+        width: 100%;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    .item-txt h2 {
+        font-size: 30px;
+    }
+    .item-txt p {
+        margin: 10px 0;
+        font-size: 1rem;
+        line-height: 1.3;
+        color: #fff;
+    }
+}
+@media screen and (max-width: 767px) {
+    .item-txt-wrap {
+        width: 70%;
+    }
+    .item-pic {
+        width: 80%;
+    }
+    .item-pic img {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .location-wrap {
+        margin: 0px;
+    }
+    .item-txt-wrap {
+        width: 80%;
+    }
+    .item-pic {
+        width: 100%;
+    }
+    .item-txt-wrap:nth-child(odd),
+    .item-txt-wrap:nth-child(odd) {
+        transform: translateY(-20%);
+    }
+    .item-txt-wrap:nth-child(even),
+    .item-txt-wrap:nth-child(even) {
+        transform: translateY(-20%);
+    }
+    .item-txt h2 {
+        font-size: 24px;
+    }
+    .item-txt button {
+        font-size: 18px;
+    }
+}

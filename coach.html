@@ -259,11 +259,14 @@
     <!-- loader -->
     <script>
         window.addEventListener('load', function () {
+            var bodyL = document.querySelector('body');
+            bodyL.classList.add('hide');
             setTimeout(function () {
                 var loader = document.querySelector('.loader-wrap');
                 loader.classList.add('loader-wrap-fadeout');
                 setTimeout(function () {
                     loader.style.display = "none";
+                    bodyL.classList.remove('hide');
                 }, 1000);
             }, 1000);
 
