@@ -90,147 +90,117 @@ li.focus {
     background-color: rgb(74, 33, 128) !important;
     color: rgb(121, 255, 88);
 }
-.product {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-    display: none;
-}
 .active {
     display: block;
 }
 .tab-content {
     width: 100%;
     display: flex;
-    justify-content: center;
-}
-.product-wrap {
-    width: 960px;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+    background-color: rgb(223, 213, 213);
+}
+.product {
+    width: 1200px;
     position: relative;
 }
-.product-item {
-    width: 100%;
-    border: 1px solid black;
-    display: flex;
-    margin: 10px;
-    background-color: rgb(252, 250, 242);
-}
-.item-left {
-    width: 50%;
-}
-.item-pic {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-.item-pic img {
-    width: 100%;
-}
-.item-right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-.hot {
+.propic {
+    z-index: 1;
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 5px 10px;
-    font-size: 20px;
-    color: rgb(245, 222, 17);
-    background-color: rgb(43, 40, 40);
+    top: 50px;
+    left: 50px;
+    width: 400px;
+    height: 400px;
 }
-.item-txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.propic img {
+    width: 100%;
+    height: 100%;
 }
-.item-txt h2 {
+.proname {
+    border: 1px solid red;
+    text-align: end;
+    padding: 30px 50px;
+    position: relative;
+}
+.proname h2 {
     font-size: 2rem;
-    color: #000;
-}
-.item-txt .select {
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
-}
-.item-txt .select select {
-    margin-left: 15px;
-}
-.item-txt .price {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: rgb(196, 39, 39);
-}
-.item-txt .price span {
-    text-decoration: line-through;
-}
-.item-txt .detail {
     margin-bottom: 15px;
 }
-.item-txt .detail button {
-    padding: 5px;
-    cursor: pointer;
-    text-decoration: underline;
-    border: none;
-    background-color: rgb(126, 122, 122);
-    color: #eee;
-}
-.item-txt .detail a button:focus {
-    outline: none;
-}
-.item-txt .buy {
-    display: flex;
-    align-items: center;
-}
-.item-txt .buy button {
-    cursor: pointer;
-    padding: 5px;
+.proname span {
     font-size: 20px;
-    color: rgb(255, 68, 68);
-    background-color: #eee;
-    border-style: ridge;
-    transition: all 0.5s;
+    padding: 20px;
 }
-.item-txt .buy button:focus {
-    outline: none;
-}
-.item-txt .buy button:hover {
-    color: #eee;
-    background-color: rgb(255, 68, 68);
-}
-
-.item-txt .buy i {
-    cursor: pointer;
-    margin-left: 20px;
-    font-size: 1.6rem;
-    color: rgb(252, 252, 252);
-    background-color: black;
-    border-radius: 10px;
-    padding: 5px;
-}
-.item-txt .buy i:hover {
-    color: #000;
-    background-color: rgb(252, 252, 252);
-}
-.more {
-    width: 100px;
-    position: absolute;
-    bottom: -17px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: red;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
-}
-.more a {
-    text-decoration: none;
+.proname .adidas{
     color: #fff;
+    background-color: rgb(28, 28, 28);
+    padding: 5px 10px;
+}
+.prooff {
+    border: 1px solid red;
+    text-align: end;
+    padding: 30px 50px;
+    position: relative;
+}
+.prooff p {
+    font-size: 24px;
+    color: rgb(255, 20, 20);
+    margin-bottom: 15px;
+}
+.prooff span {
+    font-size: 20px;
+}
+.probut {
+    border: 1px solid red;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px 50px;
+}
+.probut select{
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.probut button {
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    margin: 10px 0;
+}
+.probut a {
     display: inline-block;
-    padding: 5px;
+    text-decoration: none;
+}
+.prointr {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.prointr ul {
+    display: flex;
+    align-self: flex-end;
+    margin: 15px;
+}
+.prointr ul li {
+    width: 80px;
+    height: 40px;
+    margin: 0 10px;
+}
+.prointr ul li:nth-child(1) {
+    background-color: #5e3312;
+}
+.prointr ul li:nth-child(2) {
+    background-color: #285a35;
+}
+.prointr ul li:nth-child(3) {
+    background-color: #3b74c0;
+}
+.prointr p {
+    width: 70%;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 15px;
+    margin-top: 30px;
 }
