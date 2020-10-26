@@ -197,7 +197,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
     <footer>
@@ -214,7 +214,8 @@
 
     <script> </script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJoXsieLxtvBvy-FyvGFnfBgSSQybJlUQ&callback=initMap&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJoXsieLxtvBvy-FyvGFnfBgSSQybJlUQ&callback=initMap&callback=initMap"></script>
     <!-- loader -->
     <script>
         window.addEventListener('load', function () {
@@ -233,75 +234,75 @@
     </script>
     <script>
         function initMap() {
-        var uluru = {lat: 24.9576472, lng: 121.2249861};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
-          center: uluru,         
-          styles:[
-					{
-						stylers:[
-							{hue:'#4E3D42'},
-							{saturation:-60},
+            var uluru = { lat: 24.9576472, lng: 121.2249861 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: uluru,
+                styles: [
+                    {
+                        stylers: [
+                            { hue: '#4E3D42' },
+                            { saturation: -60 },
                             // {color:'#363732'}
-						]
-					},{
-						featureType:'road',
-						elementType:'geometry',
-						stylers:[
-							{lightness:100},
-							{visibility:'simplified'},
-                            {color:'#DCE1E9'}
-                            
-						]
-					},{
-						featureType:'poi',
-						elementType:'labels',
-						stylers:[
-							{visibility: "on"}
-						]
-					},{
-						featureType:'poi.park',//搜尋點
-						elementType:'labels',//標示的部分
-						stylers:[
-							{visibility: "on"}
-						]
-					},{
-						featureType:'transit',
-						elementType:'labels',
-						stylers:[
-							{hue:'#465775'},
-							{saturation:+80},
-                            
-						]
-					},{
-						featureType:'road',
-						elementType:'labels',
-						stylers:[
-							{visibility: "on"},
-                            
+                        ]
+                    }, {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [
+                            { lightness: 100 },
+                            { visibility: 'simplified' },
+                            { color: '#DCE1E9' }
 
-						]
-					},{
-						featureType:'water',//搜尋點
-						elementType:'geometry',//幾何/線條的部分
-						stylers:[
-                            {color:'#7EA2AA'}
-						]
-					}, {
+                        ]
+                    }, {
+                        featureType: 'poi',
+                        elementType: 'labels',
+                        stylers: [
+                            { visibility: "on" }
+                        ]
+                    }, {
+                        featureType: 'poi.park',//搜尋點
+                        elementType: 'labels',//標示的部分
+                        stylers: [
+                            { visibility: "on" }
+                        ]
+                    }, {
+                        featureType: 'transit',
+                        elementType: 'labels',
+                        stylers: [
+                            { hue: '#465775' },
+                            { saturation: +80 },
+
+                        ]
+                    }, {
+                        featureType: 'road',
+                        elementType: 'labels',
+                        stylers: [
+                            { visibility: "on" },
+
+
+                        ]
+                    }, {
+                        featureType: 'water',//搜尋點
+                        elementType: 'geometry',//幾何/線條的部分
+                        stylers: [
+                            { color: '#7EA2AA' }
+                        ]
+                    }, {
                         elementType: 'labels.text.stroke',
                         stylers: [
-                            {color: '#FFE1A8'}
+                            { color: '#FFE1A8' }
                         ]
                     }]
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          animation: google.maps.Animation.BOUNCE,
-          draggable: true,
-    
-          map: map
-        });
-      }
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                animation: google.maps.Animation.BOUNCE,
+                draggable: true,
+
+                map: map
+            });
+        }
     </script>
     <!-- RWD -->
     <script>
@@ -349,9 +350,9 @@
 
                 regs[logTabindex].classList.add('login-move');
                 if (i > 0) {
-                    line.classList.add('line');
+                    line.classList.add('login-line');
                 } else {
-                    line.classList.remove('line');
+                    line.classList.remove('login-line');
                 }
             })
         }

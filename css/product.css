@@ -95,12 +95,34 @@ li.focus {
 }
 .tab-content {
     width: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+}
+.pro-wrap{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    justify-content: center;
     background-color: rgb(223, 213, 213);
+    position: relative;
+    
 }
+.pro-wrap::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /* height: 200px; */
+    z-index: 1;
+    border-bottom: 200px solid  rgb(223, 213, 213);
+    border-left:200px solid  rgb(223, 213, 213) ;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid  transparent;
+}
+.pro-wrap::after{}
 .product {
     width: 1200px;
     position: relative;
@@ -135,6 +157,11 @@ li.focus {
     color: #fff;
     background-color: rgb(28, 28, 28);
     padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    transform: translateY(50%);
+    z-index: 1;
 }
 .prooff {
     border: 1px solid red;
@@ -149,6 +176,15 @@ li.focus {
 }
 .prooff span {
     font-size: 20px;
+}
+.prooff .btime{
+    color: #fff;
+    background-color: rgb(28, 28, 28);
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    transform: translateY(50%);
 }
 .probut {
     border: 1px solid red;
@@ -168,10 +204,13 @@ li.focus {
     padding: 5px 10px;
     border: none;
     margin: 10px 0;
+    background-color: red;
+    
 }
 .probut a {
     display: inline-block;
     text-decoration: none;
+    color: #fff;
 }
 .prointr {
     border: 1px solid red;
@@ -184,7 +223,7 @@ li.focus {
     margin: 15px;
 }
 .prointr ul li {
-    width: 80px;
+    width: 100px;
     height: 40px;
     margin: 0 10px;
 }
@@ -202,5 +241,5 @@ li.focus {
     font-size: 20px;
     line-height: 1.6;
     padding: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
