@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header-footer.css">
     <link rel="stylesheet" href="./css/location.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -144,11 +145,11 @@
     <div class="location">
         <div class="location-wrap">
             <div class="item">
-                <div class="item-pic">
+                <div class="item-pic"  data-aos="flip-left">
                     <img src="./img/GYM4.jpg" alt="中壢復興店">
                 </div>
                 <div class="item-txt-wrap">
-                    <div class="item-txt">
+                    <div class="item-txt"data-aos="flip-right">
                         <h2>中壢復興店</h2>
                         <p>地址 : 320桃園市中壢區復興路46號9樓</p>
                         <p>電話 : 0999-888-777</p>
@@ -162,8 +163,8 @@
             </div>
             <div class="item">
 
-                <div class="item-txt-wrap">
-                    <div class="item-txt">
+                <div class="item-txt-wrap" >
+                    <div class="item-txt"  data-aos="flip-left">
                         <h2>新北板橋店</h2>
                         <p>地址 : 220新北市板橋區縣民大道1段193號</p>
                         <p>電話 : 0999-888-777</p>
@@ -174,16 +175,16 @@
                         </a>
                     </div>
                 </div>
-                <div class="item-pic">
+                <div class="item-pic"data-aos="flip-right">
                     <img src="./img/world-gym.jpg" alt="新北板橋店">
                 </div>
             </div>
             <div class="item">
-                <div class="item-pic">
+                <div class="item-pic"data-aos="flip-left">
                     <img src="./img/GYM3.jpg" alt="台北西門店">
                 </div>
                 <div class="item-txt-wrap">
-                    <div class="item-txt">
+                    <div class="item-txt"data-aos="flip-right">
                         <h2>台北西門店</h2>
                         <p>地址 : 100台北市中正區寶慶路32-1號</p>
                         <p>電話 : 0999-888-777</p>
@@ -198,7 +199,7 @@
             <div class="item">
 
                 <div class="item-txt-wrap">
-                    <div class="item-txt">
+                    <div class="item-txt" data-aos="flip-left">
                         <h2>台北101店</h2>
                         <p>地址 : 110台北市信義區信義路五段7號</p>
                         <p>電話 : 0999-888-777</p>
@@ -209,7 +210,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="item-pic">
+                <div class="item-pic"data-aos="flip-right">
                     <img src="./img/gym1.jpg" alt="台北101店">
                 </div>
             </div>
@@ -299,6 +300,10 @@
             })
         }
 
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

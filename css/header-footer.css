@@ -5,11 +5,9 @@
     box-sizing: border-box;
     /* outline: 1px solid red; */
 }
-html {
-    overflow-x: hidden;
-}
 body {
     font-family: 微軟正黑體;
+    overflow-x: hidden;
 }
 body.hide {
     overflow-y: hidden;
@@ -143,7 +141,7 @@ header {
     position: relative;
 }
 .list li a {
-    font-size: 24px;
+    font-size: 18px;
     padding: 22px 0;
     text-decoration: none;
     color: #fff;
@@ -195,7 +193,7 @@ header {
     padding-left: 15px;
 }
 .login-header li a {
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     display: inline-block;
     color: #fff;
@@ -203,7 +201,7 @@ header {
 }
 .login-header li:first-of-type a:hover {
     color: rgb(255, 47, 47);
-    font-size: 24px;
+    font-size: 20px;
 }
 .login-header li:last-of-type a:hover {
     color: rgb(242, 255, 59);

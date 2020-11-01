@@ -62,6 +62,7 @@ body {
     width: 40%;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 .item-txt-wrap:nth-child(odd),
 .item-txt-wrap:nth-child(odd) {
