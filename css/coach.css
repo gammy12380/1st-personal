@@ -15,7 +15,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-bottom: 30px;
 }
 .banner-txt {
     width: 300px;
@@ -38,12 +37,14 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 .form-wrap select {
-    margin-bottom: 30px;
     font-size: 20px;
     padding: 5px 20px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .form-wrap select:focus {
     outline: none;
@@ -51,141 +52,197 @@ body {
 }
 .coach {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .coach-wrap {
-    width: 960px;
-    display: flex;
-}
-.col-1,
-.col-2 {
-    width: 460px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.col-1 {
-    margin-right: 30px;
-    position: relative;
-    /* border: 1px solid #eee; */
-}
-.col-1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -15px;
-    width: 5px;
-    height: calc(100% - 50px);
-    background: linear-gradient(
-        to top,
-        rgba(29, 29, 29, 0.1) 1%,
-        #fff,
-        rgba(29, 29, 29, 0.1) 99%
-    );
-}
-.col-2 {
-    margin-top: 200px;
-}
-.item-hei {
-    height: 500px;
-}
-.item {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    position: relative;
-    padding: 15px;
-    /* box-shadow: 0px 0px -5px -5px rgba(95, 95, 95, 0.5); */
-}
-.col-1 .item:before {
-    content: "";
-    position: absolute;
-    top: 137px;
-    right: -100px;
-    height: 5px;
-    border-right: 100px solid #fff;
-}
-.col-2 .item:before {
-    content: "";
-    position: absolute;
-    top: 137px;
-    left: -100px;
-    height: 5px;
-    border-left: 100px solid #fff;
-}
-.col-1 .item-hei:nth-child(2) {
-    height: 600px;
-}
-.col-1 .item:nth-child(1) {
-    background: linear-gradient(to top, #469496, #eee, transparent 100%);
-}
-.col-1 .item:nth-child(2) {
-    background: linear-gradient(to top, #3c8bc0, #eee, transparent 100%);
-}
-.col-1 .item:nth-child(3) {
-    background: linear-gradient(to top, #8160b6, #eee, transparent 100%);
-}
-.col-2 .item:nth-child(1) {
-    background: linear-gradient(to top, #2bb163, #eee, transparent 100%);
-}
-.col-2 .item:nth-child(2) {
-    background: linear-gradient(to top, #46a03a, #eee, transparent 100%);
-}
-.col-2 .item:nth-child(3) {
-    background: linear-gradient(to top, #27a877, #eee, transparent 100%);
-}
-.item-pic {
-    width: 250px;
-    margin: 0 auto;
-    position: relative;
-    transform: translateY(-30px);
-}
-.item-pic img {
     width: 100%;
-    vertical-align: middle;
-}
-.item:hover .item-txt {
-    height: 100px;
-    visibility: visible;
-    opacity: 1;
-}
-.item-txt {
-    position: relative;
-    width: 260px;
-    height: 0;
-    color: #000;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+}
+.coach-card:nth-child(1),
+.coach-card:nth-child(3),
+.coach-card:nth-child(5),
+.coach-card:nth-child(7) {
+    background: linear-gradient(170deg, #8278da 40%, #dfa38c, transparent 100%);
+}
+.coach-card:nth-child(2),
+.coach-card:nth-child(4),
+.coach-card:nth-child(6),
+.coach-card:nth-child(8) {
+    background: linear-gradient(-170deg, #8278da 40%, #dfa38c, transparent 100%);
+}
+
+.coach-card {
+    /* min-width: 25%; */
+    width: 400px;
+    height: 100vh;
+    transition: all 1s ease-in-out;
+    position: relative;
+    flex-shrink: 0;
+    margin: 10px;
+}
+.big {
+    width: 600px;
+    /* min-width: 50%; */
+}
+.coach-banner {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.coach-card:nth-child(1) .coach-banner {
+    background-image: url(../img/coach/unnamed.jpg);
+}
+.coach-card:nth-child(2) .coach-banner {
+    background-image: url(../img/coach/0Jpccl372p.jpeg);
+}
+.coach-card:nth-child(3) .coach-banner {
+    background-image: url(../img/coach/aa.png);
+}
+.coach-card:nth-child(4) .coach-banner {
+    background-image: url(../img/coach/800x_100_w-5ab228b2187ad.jpg);
+}
+.coach-card:nth-child(5) .coach-banner {
+    background-image: url(../img/coach/556.jpg);
+}
+.coach-card:nth-child(6) .coach-banner {
+    background-image: url(../img/coach/m2-021019-683x1024.jpg);
+}
+.coach-card:nth-child(7) .coach-banner {
+    background-image: url(../img/coach/Ulisses-Jr-Bodybuilding-Career-746x1024.jpg);
+}
+.coach-card:nth-child(8) .coach-banner {
+    background-image: url(../img/coach/5e8d59e48b494dcca894b3e739249ea0.jpg);
+}
+.coach-txt {
+    width: 100%;
+    height: 50%;
+    display: flex;
     align-items: center;
-    visibility: hidden;
-    transition: all 0.5s;
-    opacity: 0;
+    position: relative;
 }
-.item-txt h2 {
-    margin: 10px 0;
+.coach-small {
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.coach-small h2 {
+    font-size: 2rem;
+    color: rgb(61, 18, 18);
+}
+.coach-small p {
     font-size: 1.6rem;
+    margin: 20px 0;
+    color: #580a11;
 }
-.item-txt p {
-    color: rgb(252, 34, 52);
-    font-weight: bold;
-    font-size: 20px;
+.coach-txt a {
+    font-size: 0;
 }
-.item-txt button {
-    margin-top: 15px;
-    padding: 5px 10px;
-    border: none;
-    font-weight: bold;
-    background-color: red;
+.coach-small button {
     color: #fff;
-    transition: all 0.5s;
+    background-color: red;
     cursor: pointer;
+    border: none;
+    padding: 5px 15px;
+    margin: 15px;
+    transition: 0.3s;
+    font-size: 1rem;
 }
-.item-txt button:focus {
+.coach-card .open {
+    background-color: rgb(48, 24, 24);
+}
+.coach-small button:hover {
+    background-color: rgb(199, 0, 0);
+    color: #fff;
+}
+.coach-small button:focus {
     outline: none;
 }
-.item-txt button:hover {
+.coach-big {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    transition: 0.7s ease-in-out;
+}
+.coach-big h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: rgb(61, 18, 18);
+    text-align: center;
+}
+.coach-big > p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.coach-big > p:nth-child(2) {
+    color: rgb(61, 18, 18);
+}
+.coach-b-wrap {
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+.coach-big h2 > .close {
+    position: absolute;
+    margin-left: 15px;
+    font-size: 24px;
+    padding: 5px 10px;
     color: #fff;
+    background-color: rgb(48, 24, 24);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.coach-big h2 > .close:hover {
     background-color: rgb(199, 0, 0);
+}
+.coach-big h2 > .close:focus {
+    outline: none;
+}
+.coach-b-wrap button {
+    color: #fff;
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+.coach-b-wrap button:hover {
+    background-color: rgb(199, 0, 0);
+    color: #fff;
+}
+.coach-b-wrap button:focus {
+    outline: none;
+}
+.coach-b-left {
+    width: 50%;
+}
+.coach-b-left p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+.coach-b-left p:nth-child(1),
+.coach-b-right p:nth-child(1) {
+    font-size: 24px;
+    font-weight: bold;
+}
+.coach-b-right p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+.coach-b-right {
+    width: 50%;
+}
+.small {
+    opacity: 0;
+}
+.show-big {
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s;
+    z-index: 0;
 }

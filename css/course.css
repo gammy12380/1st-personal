@@ -56,34 +56,58 @@ body {
 }
 .item-txt {
     position: absolute;
-    bottom: 50%;
+    top: 50%;
     left: 0;
-    transform: translateY(50%);
+    transform: translateY(-25%);
     text-align: center;
     width: 100%;
     height: 30%;
     padding: 20px 80px;
 }
+.item-pic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.item:nth-child(1) .item-pic {
+    background-image: url(../img/gym-11-w.png);
+}
+.item:nth-child(2) .item-pic {
+    background-image: url(../img/FLY.jpg);
+}
+.item:nth-child(3) .item-pic {
+    background-image: url(../img/DANCE1.jpg);
+}
+.item:nth-child(4) .item-pic {
+    background-image: url(../img/gym-12.jpg);
+}
+.item:nth-child(5) .item-pic {
+    background-image: url(../img/yu.jpg);
+}
+.item:nth-child(6) .item-pic {
+    background-image: url(../img/MMA.jpg);
+}
 .item:nth-child(1) .item-txt {
-    background: linear-gradient(0deg, transparent,#325861e5 30%, #2d553cc5, transparent);
+    background: linear-gradient(0deg, transparent, #325861e5 30%, #2d553cc5, transparent);
 }
 .item:nth-child(2) .item-txt {
-    background: linear-gradient(0deg, transparent,#2c3549d2 30%, #5372acc0, transparent);
+    background: linear-gradient(0deg, transparent, #2c3549d2 30%, #5372acc0, transparent);
 }
 .item:nth-child(3) .item-txt {
-    background: linear-gradient(0deg, transparent,#24302fdc 30%, #2c4e47e0, transparent);
+    background: linear-gradient(0deg, transparent, #24302fdc 30%, #2c4e47e0, transparent);
 }
 .item:nth-child(4) .item-txt {
-    background: linear-gradient(0deg, transparent,#504214ce 30%, #965438b6, transparent);
+    background: linear-gradient(0deg, transparent, #504214ce 30%, #965438b6, transparent);
 }
 .item:nth-child(5) .item-txt {
-    background: linear-gradient(0deg, transparent,#276e39e3 30%, #355f4cc4, transparent);
+    background: linear-gradient(0deg, transparent, #276e39e3 30%, #355f4cc4, transparent);
 }
 .item:nth-child(6) .item-txt {
-    background: linear-gradient(0deg,transparent, #7e2222c2 20%, #5e1010a8, transparent );
+    background: linear-gradient(0deg, transparent, #7e2222c2 20%, #5e1010a8, transparent);
 }
 .item-txt h2 {
-    color: #f13c3c;
+    color: #f12323;
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 2rem;
@@ -94,11 +118,19 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-.item-txt a {
-    text-decoration: none;
+.item-txt .button {
     position: absolute;
     top: 35px;
     right: 80px;
+}
+.item-txt a {
+    text-decoration: none;
+}
+.button a:nth-child(1) button {
+    background-color: rgb(48, 24, 24);
+}
+.button a:nth-child(1) button:hover {
+    background-color: rgb(199, 0, 0);
 }
 .item-txt button {
     margin-bottom: 30px;
@@ -109,6 +141,7 @@ body {
     transition: all 0.5s;
     cursor: pointer;
     padding: 5px 10px;
+    margin: 0 5px;
 }
 .item-txt button:hover {
     background-color: rgb(199, 0, 0);
@@ -117,7 +150,38 @@ body {
 .item-txt button:focus {
     outline: none;
 }
-.item-pic img {
-    width: 100%;
-    vertical-align: middle;
+@media screen and (max-width: 991px) {
+    .item-txt .button {
+        position: static;
+    }
+}
+@media screen and (max-width: 767px) {
+    .item-txt h2 {
+        margin-bottom: 30px;
+    }
+    .item-txt p {
+        display: none;
+    }
+}
+@media screen and (max-width: 575px) {
+    .item {
+        width: 100%;
+        height: 100vh;
+    }
+    .item-txt {
+        background: none;
+    }
+    .item-txt h2 {
+        margin-bottom: 15px;
+    }
+    .item-txt a {
+        margin: 15px;
+    }
+    .item-txt .button {
+        display: flex;
+        flex-direction: column;
+    }
+    .item-pic {
+        background-position: center;
+    }
 }
