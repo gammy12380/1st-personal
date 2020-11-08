@@ -87,7 +87,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 7;
 }
 .nav {
     min-width: 1200px;
@@ -137,12 +137,15 @@ header {
     align-items: center;
 }
 .list li {
-    padding: 22px 20px;
+    padding: 22px;
     position: relative;
+    font-size: 0;
 }
 .list li a {
-    font-size: 18px;
+    font-size: 20px;
     padding: 22px 0;
+    height: 100%;
+    width: 100%;
     text-decoration: none;
     color: #fff;
 }
@@ -156,6 +159,7 @@ header {
     left: 0;
     z-index: -1;
     transition: all 0.5s;
+    transform: skewX(35deg) translateX(-15.5px);
 }
 .list li::before {
     content: "";
@@ -167,6 +171,7 @@ header {
     right: 0;
     z-index: -1;
     transition: all 0.5s;
+    transform: skewX(35deg);
 }
 .list li::after {
     content: "";
@@ -178,6 +183,7 @@ header {
     left: 0;
     z-index: -1;
     transition: all 0.5s;
+    transform: skewX(35deg) translateX(15px);
 }
 .list li:hover a:before,
 .list li:hover:before,
@@ -199,11 +205,7 @@ header {
     color: #fff;
     transition: 0.3s;
 }
-.login-header li:first-of-type a:hover {
-    color: rgb(255, 47, 47);
-    font-size: 20px;
-}
-.login-header li:last-of-type a:hover {
+.login-header li a:hover {
     color: rgb(242, 255, 59);
 }
 .login-header li:last-of-type a:focus {
@@ -241,6 +243,9 @@ header {
     .login-header {
         width: 130px;
     }
+    .list li a::before {
+        transform: skewX(35deg) translateX(-14px);
+    }
 }
 @media screen and (max-width: 991px) {
     .nav {
@@ -255,7 +260,27 @@ header {
     }
     .logo {
         width: 80px;
-        margin-left: 50px;
+        margin-left: 20px;
+    }
+    .logo::before {
+        background: linear-gradient(
+            -130deg,
+            rgb(194, 193, 193) 15%,
+            rgb(253, 253, 253) 60%,
+            rgb(253, 253, 253)
+        );
+        z-index: -1;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    }
+    .logo::after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        background: rgb(253, 253, 253);
+        padding: 10px 20px;
+        left: -50px;
     }
     .ham {
         cursor: pointer;
@@ -269,6 +294,7 @@ header {
         top: 10px;
         /* background-color: #fff; */
     }
+
     .ham:hover {
         background-color: rgba(161, 185, 206, 0.349);
         border-radius: 40%;
@@ -386,8 +412,9 @@ header {
         font-weight: bold;
         padding: 15px;
         position: relative;
+        transition: 0.5s;
     }
-    .login-header-rwd > li a::before {
+    /* .login-header-rwd > li a::before {
         content: "";
         display: block;
         position: absolute;
@@ -396,9 +423,9 @@ header {
         width: 45px;
         border-bottom: 3px solid rgb(197, 32, 32);
         transition: 0.5s;
-    }
-    .login-header-rwd > li:hover a::before {
-        width: 95px;
+    } */
+    .login-header-rwd > li:hover a {
+        color: rgb(197, 32, 32);
     }
     .nav-circle {
         display: none;
@@ -424,7 +451,7 @@ input[type="number"] {
 .login {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
@@ -621,6 +648,77 @@ input[type="number"] {
 }
 .reg form .reg-but button:hover {
     border: 2px solid rgb(84, 149, 170);
+}
+@media screen and (max-width: 991px) {
+    .login-wrap {
+        width: 400px;
+        height: 350px;
+    }
+    .login-left h2,
+    .login-right h2 {
+        font-size: 30px;
+    }
+    .login .log form input {
+        font-size: 24px;
+    }
+    .reg form label {
+        font-size: 1rem;
+    }
+    .reg form input {
+        font-size: 1rem;
+        padding: 5px 10px;
+        color: #fff;
+        background: transparent;
+    }
+    .login-bot-line {
+        top: 45px;
+        left: 18px;
+        border-bottom: 4px solid green;
+    }
+    .login-line {
+        transform: translateX(160px);
+    }
+}
+@media screen and (max-width: 575px) {
+    .login-tab {
+        margin-top: 5px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .login-wrap {
+        width: 100%;
+    }
+    .login-left h2.h2-bottom {
+        border-bottom: 3px solid green;
+    }
+    .login-left h2,
+    .login-right h2 {
+        font-size: 24px;
+        width: 100px;
+        margin: 0 auto 15px;
+    }
+
+    .login-bot-line {
+        display: none;
+    }
+    .login .log form {
+        width: 100%;
+    }
+    .login .log form input {
+        font-size: 20px;
+    }
+    .login .log form .log-but {
+        width: 80%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .login .log form .log-but button {
+        width: 100px;
+        padding: 5px 15px;
+        font-size: 20px;
+    }
 }
 
 /*  footer  */

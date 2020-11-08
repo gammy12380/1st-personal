@@ -42,7 +42,6 @@
                 </ul>
             </div>
             <ul class="login-header">
-                <li><a href="#"><i class="fas fa-shopping-cart"></i></i></a></li>
                 <li><a href="#" class="login-on">登入/註冊</a></li>
             </ul>
             <label for="checkbox">
@@ -67,7 +66,6 @@
                     <li><a href="./contact.html">聯絡我們</a></li>
                 </ul>
                 <ul class="login-header-rwd">
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i></i></a></li>
                     <li><a href="#" class="login-on">登入/註冊</a></li>
                 </ul>
             </div>
@@ -420,10 +418,10 @@
             login[i].addEventListener('click', function () {
 
                 box.style.display = "flex";
-                // logW.classList.add('login-active');
+
                 x.addEventListener('click', function () {
                     box.style.display = "none";
-                    // logW.classList.remove('login-active');
+
                 })
             });
         }
@@ -439,6 +437,15 @@
                 logTabindex = i;
 
                 regs[logTabindex].classList.add('login-move');
+                var left = document.querySelector('.login-left > h2');
+                var right = document.querySelector('.login-right > h2');
+                if (i > 0) {
+                    left.classList.remove('h2-bottom');
+                    right.classList.add('h2-bottom');
+                } else {
+                    left.classList.add('h2-bottom');
+                    // right.classList.remove('h2-bottom');
+                }
                 if (i > 0) {
                     line.classList.add('login-line');
                 } else {
@@ -449,29 +456,7 @@
 
 
     </script>
-    <!-- 回到頂端 -->
-    <!-- <script>
 
-    $(function () {
-
-    $('.go_top').on('click', function (e) {
-        event.preventDefault();
-        $('body,html').animate({
-            scrollTop: 0
-        }, 1000);
-    });
-
-
-    document.querySelector('.go_top').style.display = 'none';
-    window.addEventListener('scroll', function () {
-        if (document.documentElement.scrollTop < 100) {
-            document.querySelector('.go_top').style.display = 'none';
-        } else {
-            document .querySelector('.go_top').style.display = '';
-        }
-    });
-    });
-    </script> -->
 
 </body>
 

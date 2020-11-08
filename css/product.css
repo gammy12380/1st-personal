@@ -8,6 +8,172 @@ body {
     border-bottom: 5px solid rgb(255, 20, 20);
     transition: all 0.5s 0.3s;
 }
+.shopcar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: #333333;
+    z-index: 5;
+    transform: translateX(-100%) translateY(-50%);
+    transition: 0.5s ease-in-out;
+}
+.shop-slider {
+    transform: translateX(0%) translateY(-50%);
+}
+.shopcar-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    transform: translateX(100%);
+    width: 50px;
+    height: 50px;
+    background-color: #142947;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 30px 30px 0px;
+}
+.shopcar-icon i {
+    color: #fff;
+    font-size: 2rem;
+}
+.shopcar-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.shopcar-wrap i {
+    font-size: 20px;
+    margin-right: 10px;
+    display: none;
+}
+.shopcar-wrap h2 {
+    background-color: chocolate;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.shop-item {
+    text-align: center;
+    padding: 0 15px;
+    margin: 15px 0;
+    color: #fff;
+    overflow: auto;
+    height: 300px;
+}
+.shop-item::-webkit-scrollbar {
+    display: none;
+}
+.shop-item table {
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.shop-item table td:first-child {
+    width: 150px;
+}
+.shop-item table td:nth-child(2) {
+    width: 110px;
+}
+.shop-item table:last-child {
+    margin-bottom: 0;
+}
+.shop-item table td {
+    font-size: 1rem;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: rgb(160, 148, 39);
+    text-align: center;
+}
+.shop-item table td:last-child {
+    background: none;
+}
+.shop-item button {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 10px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.shop-item button:focus {
+    outline: none;
+}
+.shop-item button:hover {
+    background-color: rgb(199, 0, 0);
+}
+.pay {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: chocolate;
+}
+.pay p {
+    width: 50%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+.pay > button {
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(39, 34, 17);
+    transition: 0.5s;
+    border: none;
+}
+.pay button:focus {
+    outline: none;
+}
+.pay button:hover {
+    background-color: rgb(199, 0, 0);
+}
+@media screen and (max-width: 575px) {
+    .shop-item table td:first-child {
+        width: auto;
+    }
+    .shop-item tr {
+        width: 100%;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+    .shop-item table td:nth-child(2) {
+        width: auto;
+    }
+    .shopcar-wrap i {
+        display: block;
+    }
+    .shopcar-wrap h2 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .shop-item table td {
+        padding: 5px;
+    }
+    .shop-item {
+        padding: 0px;
+        margin: 15px 0;
+    }
+}
 .banner {
     width: 100%;
     position: relative;
@@ -160,6 +326,15 @@ li.focus {
     width: 380px;
     transform: rotateX(20deg) rotateY(10deg);
 }
+.pic1 {
+    top: 60px;
+}
+.pic2 {
+    top: 150px;
+}
+.pic3 {
+    top: 80px;
+}
 .propic img {
     width: 100%;
     height: 100%;
@@ -240,7 +415,7 @@ li.focus {
     color: rgb(233, 10, 10);
     font-weight: bold;
 }
-.prooff span small {
+.prooff span small:first-child {
     text-decoration: line-through;
     margin-right: 15px;
     font-size: 24px;
@@ -397,6 +572,18 @@ li.focus {
         width: 320px;
         transform: rotateX(20deg) rotateY(10deg);
     }
+    .pic1 {
+        top: 80px;
+    }
+    .pic2 {
+        top: 150px;
+    }
+    .pic3 {
+        top: 100px;
+    }
+    .pic4 {
+        top: 60px;
+    }
     .proname span:nth-child(2)::before {
         width: 600px;
     }
@@ -424,6 +611,12 @@ li.focus {
     .propic {
         position: relative;
         margin: 0 auto;
+    }
+    .pic1,
+    .pic2,
+    .pic3,
+    .pic4 {
+        top: 0;
     }
     .proname {
         text-align: center;
