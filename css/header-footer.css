@@ -414,7 +414,7 @@ header {
         position: relative;
         transition: 0.5s;
     }
-    /* .login-header-rwd > li a::before {
+    .login-header-rwd > li a::before {
         content: "";
         display: block;
         position: absolute;
@@ -423,7 +423,7 @@ header {
         width: 45px;
         border-bottom: 3px solid rgb(197, 32, 32);
         transition: 0.5s;
-    } */
+    }
     .login-header-rwd > li:hover a {
         color: rgb(197, 32, 32);
     }
@@ -434,6 +434,12 @@ header {
 @media screen and (max-width: 575px) {
     .list-rwd > li a {
         font-size: 20px;
+    }
+    .list-rwd > li a::before {
+        width: 40px;
+    }
+    .list-rwd > li:hover a::before {
+        width: 80px;
     }
 }
 /*  導覽列  */

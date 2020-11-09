@@ -272,20 +272,17 @@ li.focus {
     transform: rotate(-3deg);
     padding: 50px;
     display: none;
-    /* overflow: hidden; */
 }
 .pro-wrap::before {
     content: "";
     position: absolute;
     top: 0;
-    /* right: 0; */
     left: 50%;
-    width: 300%;
+    width: 200%;
     height: 100%;
     transform: translateX(-50%);
     background: rgb(233, 226, 217);
     z-index: -1;
-    overflow: hidden;
 }
 .pro-box {
     transform: rotate(3deg);
@@ -455,8 +452,14 @@ li.focus {
     transition: 0.5s;
     cursor: pointer;
 }
+.probut button:nth-child(2) {
+    background: none;
+}
 .probut button:hover {
     background-color: rgb(199, 0, 0);
+}
+.probut button:hover i {
+    color: #fff;
 }
 .probut button:focus {
     outline: none;
@@ -466,6 +469,7 @@ li.focus {
     text-decoration: none;
     color: #fff;
 }
+
 .prointr {
     /* border: 1px solid red; */
     display: flex;
@@ -605,6 +609,9 @@ li.focus {
     }
 }
 @media screen and (max-width: 991px) {
+    .pro-wrap::before {
+        overflow: hidden;
+    }
     .product {
         width: 100%;
     }
