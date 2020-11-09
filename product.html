@@ -969,6 +969,7 @@
                     for (let j = 0; j < del.length; j++) {
                         del[j].addEventListener("click", function () {
                             deleteProd(j);
+                            nowCount.innerText = itemArr.length;
                         });
                     }
                 }
