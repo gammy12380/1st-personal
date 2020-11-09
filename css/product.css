@@ -37,6 +37,18 @@ body {
     align-items: center;
     border-radius: 0px 30px 30px 0px;
 }
+.nowcount {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    background-color: red;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+}
 .shopcar-icon i {
     color: #fff;
     font-size: 2rem;
