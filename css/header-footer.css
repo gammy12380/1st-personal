@@ -159,7 +159,7 @@ header {
     left: 0;
     z-index: -1;
     transition: all 0.5s;
-    transform: skewX(35deg) translateX(-15.5px);
+    transform: skewX(35deg) translateX(-14.7px);
 }
 .list li::before {
     content: "";
@@ -183,7 +183,7 @@ header {
     left: 0;
     z-index: -1;
     transition: all 0.5s;
-    transform: skewX(35deg) translateX(15px);
+    transform: skewX(35deg) translateX(15.3px);
 }
 .list li:hover a:before,
 .list li:hover:before,
@@ -196,19 +196,17 @@ header {
     align-items: center;
 }
 .login-header li {
-    padding-left: 15px;
-}
-.login-header li a {
     font-size: 16px;
     text-decoration: none;
     display: inline-block;
     color: #fff;
     transition: 0.3s;
+    cursor: pointer;
 }
-.login-header li a:hover {
+.login-header li:hover {
     color: rgb(242, 255, 59);
 }
-.login-header li:last-of-type a:focus {
+.login-header  li:focus p{
     border: 1px dashed #000;
 }
 #checkbox {
@@ -244,7 +242,10 @@ header {
         width: 130px;
     }
     .list li a::before {
-        transform: skewX(35deg) translateX(-14px);
+        transform: skewX(35deg) translateX(-15px);
+    }
+    .list li::after {
+        transform: skewX(35deg) translateX(15px);
     }
 }
 @media screen and (max-width: 991px) {
@@ -404,7 +405,7 @@ header {
         width: 128px;
         text-align: center;
     }
-    .login-header-rwd > li a {
+    .login-header-rwd > li {
         display: block;
         color: rgb(28, 28, 28);
         text-decoration: none;
@@ -413,18 +414,9 @@ header {
         padding: 15px;
         position: relative;
         transition: 0.5s;
+        cursor: pointer;
     }
-    .login-header-rwd > li a::before {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: 5px;
-        left: 15px;
-        width: 45px;
-        border-bottom: 3px solid rgb(197, 32, 32);
-        transition: 0.5s;
-    }
-    .login-header-rwd > li:hover a {
+    .login-header-rwd > li:hover {
         color: rgb(197, 32, 32);
     }
     .nav-circle {
@@ -434,6 +426,9 @@ header {
 @media screen and (max-width: 575px) {
     .list-rwd > li a {
         font-size: 20px;
+    }
+    .login-header-rwd > li {
+        font-size: 18px;
     }
     .list-rwd > li a::before {
         width: 40px;

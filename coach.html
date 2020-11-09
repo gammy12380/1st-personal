@@ -42,10 +42,13 @@
                 </ul>
             </div>
             <ul class="login-header">
-                <li><a href="#" class="login-on">登入/註冊</a></li>
+                <li>
+                    <p class="login-on">登入/註冊</p>
+                </li>
             </ul>
             <label for="checkbox">
-                <svg class="ham ham6" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active-svg')">
+                <svg class="line ham ham6" viewBox="0 0 100 100" width="60"
+                    onclick="this.classList.toggle('active-svg')">
                     <path class="line top"
                         d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
                     <path class="line middle"
@@ -65,7 +68,9 @@
                     <li><a href="./contact.html">聯絡我們</a></li>
                 </ul>
                 <ul class="login-header-rwd">
-                    <li><a href="#" class="login-on">登入/註冊</a></li>
+                    <li>
+                        <p class="login-on">登入/註冊</p>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -162,7 +167,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>David Laid
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>體能訓練課程</p>
                         <div class="coach-b-wrap">
@@ -197,7 +203,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>麥可·基瓦尼亞
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>綜合格鬥課程</p>
                         <div class="coach-b-wrap">
@@ -231,7 +238,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>Anllela Sagra
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>瑜珈課程</p>
                         <div class="coach-b-wrap">
@@ -264,7 +272,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>陳之漢
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>肌力心肺訓練課程</p>
                         <div class="coach-b-wrap">
@@ -298,7 +307,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>Candy
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>舞蹈課程</p>
                         <div class="coach-b-wrap">
@@ -332,7 +342,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>弗蘭克
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>飛輪訓練課程</p>
                         <div class="coach-b-wrap">
@@ -368,7 +379,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>Zack
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>體能訓練課程</p>
                         <div class="coach-b-wrap">
@@ -403,7 +415,8 @@
                     </div>
                     <div class="coach-big">
                         <h2>威力
-                            <button class="close"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-up"></i></button>
+                            <button class="close"><i class="fas fa-arrow-left"></i><i
+                                    class="fas fa-arrow-up"></i></button>
                         </h2>
                         <p>肌力心肺訓練課程</p>
                         <div class="coach-b-wrap">
@@ -583,8 +596,8 @@
             // }
 
             if (e.wheelDelta <= 0) {
-                if (count > (li.length - 2)) { 
-                    
+                if (count > (li.length - 2)) {
+
                     return
                 } else {
                     e.preventDefault();
@@ -594,16 +607,16 @@
                 }
             } else {
                 count--;
-                if (count < 0) { 
-                    count = 0 
-                   
+                if (count < 0) {
+                    count = 0
+
                     return
                 } else {
                     if (parseInt(ul.style.marginLeft) == 0) { return }
                     e.preventDefault();
                     move = move + 420;
                     ul.style.marginLeft = move + "px";
-                    
+
                 }
             }
 
