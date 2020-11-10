@@ -10,9 +10,10 @@ body {
 }
 .banner {
     width: 100%;
-    background: url(../img/spin-studio-best-gym-near-me-springfield.jpg);
+    background: url(../img/banner-.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 600px;
     position: relative;
 }
