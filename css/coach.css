@@ -33,12 +33,35 @@ body {
     color: #fff;
     line-height: 100px;
 }
+@media screen and (max-width: 1199px) {
+    .banner-txt {
+        width: 200px;
+        height: 80px;
+    }
+    .banner-txt h2 {
+        font-size: 36px;
+        line-height: 80px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .banner {
+        height: 300px;
+    }
+    .banner-txt {
+        width: 150px;
+        height: 60px;
+    }
+    .banner-txt h2 {
+        font-size: 30px;
+        line-height: 60px;
+    }
+}
 .form-wrap {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .form-wrap select {
     font-size: 20px;
