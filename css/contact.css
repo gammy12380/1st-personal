@@ -140,7 +140,7 @@ body {
     text-align: center;
     color: #fff;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(28, 28, 28);
     transition: all 1s;
 }
 .item:nth-of-type(2):hover .item-txt {
@@ -179,7 +179,7 @@ body {
     text-align: center;
     color: #fff;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(28, 28, 28);
     transition: all 1s;
     padding: 0 20px;
 }
