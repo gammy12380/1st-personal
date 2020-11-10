@@ -477,17 +477,17 @@ video {
 }
 .sec3-txt {
     height: 80%;
-    color: #ffff;
+    color: rgb(228, 223, 196);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 /* ss */
 .slider-wrap {
     width: 400px;
-    height: 260px;
     overflow: hidden;
     position: relative;
     margin: 5px 0;
@@ -500,14 +500,38 @@ video {
 }
 .slider .sec3-img {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+    
 }
-.slider .sec3-img img {
+.sec3-img1{
+    background-image: url(../img/5ecd83994dca6847f2265f65.jpg);
+}
+.sec3-img2{
+    background-image: url(../img/abef0ccfaa99af314628efde87f7caff.jpg);
+}
+.sec3-img3{
+    background-image: url(../img/GYM2.jpg);
+}
+.sec3-img4{
+    background-image: url(../img/weight-floor-01.jpg);
+}
+.sec3-item{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    vertical-align: middle;
+    position: relative;
 }
 .sec3-txt .pic-txt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     line-height: 1.6;
 }
 .sec3-txt h2 {
@@ -517,9 +541,11 @@ video {
     color: rgb(235, 77, 66);
     text-shadow: 3px 3px 3px rgba(0, 0, 0.3);
 }
-.sec3-txt p {
+.sec3-item p {
     font-size: 20px;
     line-height: 1.6;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
+        0 0 0.2em #87F;
 }
 .sec3-txt .loc {
     margin-top: 10px;
@@ -566,13 +592,14 @@ video {
     background: transparent;
     font-size: 24px;
     top: 50%;
+    opacity: .8;
     transform: translateY(-50%);
 }
 .sec3-txt #back {
-    left: 0px;
+    left: -15px;
 }
 .sec3-txt #forward {
-    right: 0;
+    right: -15px;
 }
 .sec3-txt #back:focus,
 .sec3-txt #forward:focus {
@@ -582,7 +609,20 @@ video {
     .slider-wrap {
         width: 300px;
     }
-    .sec3-txt p,
+    .sec3-item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+    .sec3-txt .pic-txt {
+        bottom:15px;
+    }
+    .sec3-txt .pic-txt p{
+        width: 300px;
+        padding:0 15px;
+    }
+    .sec3-item p,
     .sec3-txt .loc {
         font-size: 16px;
     }
@@ -595,10 +635,14 @@ video {
     .slider .sec3-img {
         width: 100%;
     }
+    .sec3-txt .pic-txt p{
+        width: 260px;
+        padding:0 15px;
+    }
     .slider .sec3-img img {
         max-width: 100%;
     }
-    .sec3-txt h2 {
+    .sec3-item h2 {
         font-size: 30px;
     }
 }

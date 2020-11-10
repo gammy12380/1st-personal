@@ -214,40 +214,58 @@
                         <h2>據點介紹</h2>
                         <div class="slider-wrap">
                             <div class="slider" id="slider">
-                                <div class="sec3-img">
-                                    <img src="./img/5ecd83994dca6847f2265f65.jpg" alt="據點圖">
+                                <div class="sec3-item">
+                                    <div class="sec3-img sec3-img1">
+                                    </div>
+                                    <div class="pic-txt">
+                                        <p>中壢復興店</p>
+                                        <p>地址 : 桃園市中壢區復興路46號9樓</p>
+                                        <p>TEL : 0998-888-777</p>
+                                        <p>開始預售</p>
+                                    </div>
                                 </div>
-                                <div class="sec3-img">
-                                    <img src="./img/abef0ccfaa99af314628efde87f7caff.jpg" alt="據點圖">
+                                <div class="sec3-item">
+                                    <div class="sec3-img sec3-img2">
+                                    </div>
+                                    <div class="pic-txt">
+                                        <p>新北板橋店</p>
+                                        <p>地址 : 220新北市板橋區縣民大道1段193號</p>
+                                        <p>TEL : 0998-888-777</p>
+                                        <p>開始預售</p>
+                                    </div>
                                 </div>
-                                <div class="sec3-img">
-                                    <img src="./img/GYM2.jpg" alt="據點圖">
+                                <div class="sec3-item">
+                                    <div class="sec3-img sec3-img3">
+                                    </div>
+                                    <div class="pic-txt">
+                                        <p>台北西門店</p>
+                                        <p>地址 : 100台北市中正區寶慶路32-1號</p>
+                                        <p>TEL : 0998-888-777</p>
+                                        <p>開始預售</p>
+                                    </div>
                                 </div>
-                                <div class="sec3-img">
-                                    <img src="./img/weight-floor-01.jpg" alt="據點圖">
+                                <div class="sec3-item">
+                                    <div class="sec3-img sec3-img4">
+                                    </div>
+                                    <div class="pic-txt">
+                                        <p>台北101店</p>
+                                        <p>地址 : 110台北市信義區信義路五段7號</p>
+                                        <p>TEL : 0998-888-777</p>
+                                        <p>開始預售</p>
+                                    </div>
                                 </div>
                             </div>
-                            <button id="back"><i class="fas fa-angle-double-left"></i></button>
-                            <button id="forward"><i class="fas fa-angle-double-right"></i></button>
-                        </div>
-                        <div>
-                            <p class="pic-txt">中壢復興店</p>
-                            <p>地址 : 桃園市中壢區復興路46號9樓</p>
-                            <p>TEL : 0998-888-777</p>
-                        </div>
-                        <div>
-                            <p>開始預售</p>
                         </div>
                         <div><a href="./location.html">
                                 <button class="loc">查看據點</button>
                             </a></div>
-
-
-
+                        <button id="back"><i class="fas fa-angle-double-left"></i></button>
+                        <button id="forward"><i class="fas fa-angle-double-right"></i></button>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="section">
             <div class="sec4">
                 <div class="sec4-wrap">
@@ -282,6 +300,7 @@
                 </div>
             </div>
         </div>
+
         <section class="section footer">
             <footer>
                 <div class="copyright">
@@ -382,7 +401,7 @@
         var slider = document.querySelector('#slider');
         var sliderWidth = slider.offsetWidth;
 
-        var contens = document.querySelectorAll('#slider > .sec3-img');
+        var contens = document.querySelectorAll('#slider > .sec3-item');
         var contenWidth = contens[0].offsetWidth;
 
         var backBtn = document.querySelector('#back');
