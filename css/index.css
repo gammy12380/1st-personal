@@ -544,8 +544,8 @@ video {
 .sec3-item p {
     font-size: 20px;
     line-height: 1.6;
-    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
-        0 0 0.2em #87F;
+    text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
 }
 .sec3-txt .loc {
     margin-top: 10px;
