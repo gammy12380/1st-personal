@@ -101,7 +101,7 @@ body {
 .coach-card {
     /* min-width: 25%; */
     width: 400px;
-    height: 800px;
+    height: 600px;
     transition: all 1s ease-in-out;
     position: relative;
     flex-shrink: 0;
