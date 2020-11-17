@@ -416,7 +416,7 @@ li.focus {
 }
 .proname .adidas {
     color: #fff;
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(65, 65, 65);
     padding: 5px 15px;
     position: absolute;
     bottom: 0;
@@ -449,12 +449,12 @@ li.focus {
     background-color: rgb(224, 132, 45);
 }
 .prooff p {
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 15px;
-    color: rgb(170, 29, 29);
+    color: rgb(80, 17, 17);
 }
 .prooff span {
-    font-size: 30px;
+    font-size: 36px;
     color: rgb(233, 10, 10);
     font-weight: bold;
 }
@@ -466,7 +466,7 @@ li.focus {
 }
 .prooff .btime {
     color: #fff;
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(65, 65, 65);
     padding: 5px 15px;
     position: absolute;
     bottom: 0;
@@ -613,7 +613,7 @@ li.focus {
     .product:nth-child(2)::after,
     .product:nth-child(3)::after,
     .product:nth-child(4)::after {
-        height: 502px;
+        height: 509px;
     }
     .propic {
         z-index: 1;
@@ -702,7 +702,7 @@ li.focus {
         padding: 30px 50px;
     }
     .prooff p {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 15px;
     }
     .probut {
@@ -800,8 +800,6 @@ li.focus {
     }
     .proname .adidas,
     .prooff .btime {
-        color: #fff;
-        background-color: rgb(28, 28, 28);
         padding: 5px 15px;
         position: absolute;
         bottom: 0;
