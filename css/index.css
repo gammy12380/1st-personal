@@ -42,8 +42,6 @@ video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    /* height: -webkit-fill-available; */
-    /* z-index: -10; */
 }
 .sec1-wrap {
     width: 100%;
@@ -100,14 +98,14 @@ video {
     margin-top: 10px;
 }
 .sec1-animate-top {
-    animation: top 1s;
-    animation-delay: 2s;
+    animation: top 2.5s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
 .sec1-animate-bot {
-    animation: bot 2s;
-    animation-delay: 2s;
+    animation: bot 2.5s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
